@@ -13,23 +13,37 @@ To write a Python program that generates **Pascal's Triangle** using numbers. Th
 ## 🧠 Algorithm
 
 1. Start the program.
-2. Input the number of rows from the user.
-3. Loop from 0 to the number of rows.
-4. For each row:
-   - Print appropriate spaces to shape the triangle.
-   - Compute values using the formula:  
-     \[
-     C(n, k) = \frac{n!}{k!(n-k)!}
-     \]
-5. Print all rows of Pascal’s Triangle.
-6. End the program.
+2. 2.	Read integer ‘a’ from user. 
+3.	Outer loop 
+      1.	Loop over i from 0 to a-1 (each row in Pascal's Triangle). 
+4.	Inner Loop 
+      1.	For each row i, print (a-i-1) spaces to align the numbers correctly. 
+5.	Inner Loop(Binomial coefficients): 
+      1.	For each row i, loop over j from 0 to i (this will print the elements of the row). 
+      2.	For each j, calculate the Binomial coefficient using math package: i!//j!*(i−j)! 
+      3.	Print the Binomial Coefficient without a newline (use end=" "). 
+6.	Print new line
+7.	End
+
 
 ---
 
 ## 🧪 Program
-Add Code Here
+```
+from math import factorial 
+a=int(input())
+for i in range(a):
+    for j in range (a-i-1): 
+        print(end=" ")
+for j in range(i+1): 
+        print(factorial(i)//(factorial(j)*factorial(i-j)),end=" ")
+print() 
+```
 
 ## Sample Output
 
-## Result
+![Screenshot 2025-05-11 164309](https://github.com/user-attachments/assets/a2546826-6834-43d3-8576-1822e91af19b)
 
+
+## Result
+Thus, the python program to print Pascal triangle is created successfully.
